@@ -1,0 +1,42 @@
+#include <cstdlib> 
+#include <ctime> 
+#include <iostream>
+using namespace std;
+
+	int jumlahzero;
+	int zero[10];
+	int jawaban;
+	
+
+int main() 
+{ 
+	
+
+	cout << "Selamat datang di O-Zero!!";
+	cout << endl << "Bisakah kamu tebak ada berapa angka 0 dalam baris ini?" << endl << endl;
+    srand((unsigned)time(0)); 
+
+	for(int i = 0; i < 10; i++){
+		zero[i] = (rand()%2)+1; 
+		switch(zero[i]){
+			case 1: cout << "O"; break;
+			case 2: cout << "0"; jumlahzero++; break;
+		}
+	}
+	
+	cout << endl << "Ada berapa angka 0?"<<endl;
+	
+	cin >> jawaban;
+	
+	if(jawaban == jumlahzero){
+		cout << endl << "kamu hebat!";
+	}
+	else{
+		cout << endl << "salah masbro" << endl;
+		
+	}
+	
+	
+	//cout << endl << jumlahzero;
+	
+}
